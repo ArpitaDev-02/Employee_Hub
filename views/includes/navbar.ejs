@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><i class="fa-brands fa-pied-piper"></i></a>
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse"
+       data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+            <a class="nav-link" href="/employeeHub">Home</a>         
+            <a class="nav-link" href="/employeeHub/employeeList">employee List</a>
+            <a class="nav-link" href="/employeeHub/new">Create new Account</a>
+        </div>
+
+        <div class="navbar-nav ms-auto">  
+          <p class="mt-2"><%= currUser.username  %></p>       
+          <a class="nav-link" href="/employeeHub/logout">logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>

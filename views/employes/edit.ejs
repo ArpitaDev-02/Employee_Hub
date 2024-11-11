@@ -1,0 +1,64 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <br/> <br/>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h2>Edit your profile</h2>
+    <form method="POST" action="/employeeHub/employeeList/<%= employee.id%>?_method=PUT" class="needs-validation" novalidate>
+        <div>
+            <label for="name" class="form-label">Name</label>
+            <input name="employee[name]" placeholder="Enter name" value="<%= employee.name%>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">Please enter valid name</div> 
+        </div>
+
+        <div>
+            <label for="email" class="form-label">Email</label>
+            <input name="employee[email]" placeholder="Enter Email" value="<%= employee.email%>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">Please enter valid email</div>
+        </div>
+
+        <div>
+            <label for="mobile" class="form-label">Mobile</label>
+            <input name="employee[mobile]" placeholder="Enter mobile number" value="<%= employee.mobile%>" type="number" class="form-control" required/>
+            <div class="invalid-feedback">Please enter valid Mobile number</div>
+        </div>
+     
+       <div>
+        <label for="designation" class="form-label">Designation</label>
+        <!-- <input name="employee[designation]" placeholder="Enter designation" value="<%= employee.designation%>" type="text" class="form-control" required/> -->
+        <select name="employee[designation]" class="form-control" required >
+            <option value="HR">HR</option>
+            <option value="Manager">Manger</option>
+            <option value="Sales">Sales</option>
+        </select>
+       </div>
+        
+       <div>
+        <label for="gender" class="form-label">Gender</label>
+        <input name="employee[gender]" type="radio" value="Male"/>
+        <label for="css" class="form-label">Male</label>
+        <input name="employee[gender]" type="radio" value="Female"/>
+        <label for="css">Female</label>
+    </div>
+
+        <div>
+            <label for="course" class="form-label">Course</label>
+            <select name="employee[course]" class="form-control" required >
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="BSC">BSC</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="image" class="form-label">Image URL/Link</label>
+            <input name="employee[image]" placeholder="Enter image URL/Link" value="<%= employee.image%>" type="text" class="form-control"/>
+        </div>
+       
+        <br/> <br/>
+        <button class="btn btn-success">Submit</button>
+        <br/> <br/>
+    </form>
+</div>
+</div>
+</body>
